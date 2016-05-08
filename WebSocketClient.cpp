@@ -72,18 +72,18 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-prog_char clientHandshakeLine1a[] PROGMEM = "GET ";
-prog_char clientHandshakeLine1b[] PROGMEM = " HTTP/1.1";
-prog_char clientHandshakeLine2[] PROGMEM = "Upgrade: WebSocket";
-prog_char clientHandshakeLine3[] PROGMEM = "Connection: Upgrade";
-prog_char clientHandshakeLine4[] PROGMEM = "Host: ";
-prog_char clientHandshakeLine5[] PROGMEM = "Sec-WebSocket-Origin: ArduinoWebSocketClient";
-prog_char clientHandshakeLine6[] PROGMEM = "Sec-WebSocket-Version: 13";
-prog_char clientHandshakeLine7[] PROGMEM = "Sec-WebSocket-Key: ";
-prog_char clientHandshakeLine8[] PROGMEM = "Sec-WebSocket-Protocol: ";
-prog_char serverHandshake[] PROGMEM = "HTTP/1.1 101";
+const char clientHandshakeLine1a[] PROGMEM = "GET ";
+const char clientHandshakeLine1b[] PROGMEM = " HTTP/1.1";
+const char clientHandshakeLine2[] PROGMEM = "Upgrade: WebSocket";
+const char clientHandshakeLine3[] PROGMEM = "Connection: Upgrade";
+const char clientHandshakeLine4[] PROGMEM = "Host: ";
+const char clientHandshakeLine5[] PROGMEM = "Sec-WebSocket-Origin: ArduinoWebSocketClient";
+const char clientHandshakeLine6[] PROGMEM = "Sec-WebSocket-Version: 13";
+const char clientHandshakeLine7[] PROGMEM = "Sec-WebSocket-Key: ";
+const char clientHandshakeLine8[] PROGMEM = "Sec-WebSocket-Protocol: ";
+const char serverHandshake[] PROGMEM = "HTTP/1.1 101";
 
-PROGMEM const char *WebSocketClientStringTable[] =
+PGM_P const WebSocketClientStringTable[] PROGMEM =
 {
   clientHandshakeLine1a,
   clientHandshakeLine1b,
